@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class Example1 {
 
@@ -9,29 +10,47 @@ public class Example1 {
 		 * sender에서 출력 배열은 abstract에서 사용 배열 데이터:6,13,22,9,12,64,32,47,39
 		 */
 
-		b1 su = new b1();
-		su.sender();
+		arr1 ar = new arr1();
 
 	}
 
 }
 
-abstract class aa {
-	int dt[] = { 6, 13, 22, 9, 12, 64, 32, 47, 39 };
-	public abstract void sender();
+/* 선생님이 풀어주신 것 */
+abstract class vdata {
 
+	public abstract void sender();
 }
 
-class b1 extends aa {
+class arr1 extends vdata {
+	private final int alldata[];
+
+	public arr1() {
+
+		this.alldata = new int[] { 6, 13, 22, 9, 12, 64, 32, 47, 39 };
+		this.sender();
+
+	}
 
 	@Override
 	public void sender() {
 		int total = 0;
-		for (int i = 0; i < this.dt.length; i++) {
-			total += this.dt[i];
+		for (int i = 0; i < this.alldata.length; i++) {
+			total += this.alldata[i];
 		}
-		System.out.println(total);
-
+		System.out.println("총 합계: " + total);
 	}
 
 }
+
+/*
+ * 내가 푼것(정답 맞음) abstract class aa{ int dt[] = {6,13,22,9,12,64,32,47,39}; public
+ * abstract void sender(); }
+ * 
+ * class b1 extends aa{
+ * 
+ * @Override public void sender() { int total=0; for(int
+ * i=0;i<this.dt.length;i++) { total+=this.dt[i]; } System.out.println(total); }
+ * 
+ * }
+ */

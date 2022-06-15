@@ -17,7 +17,7 @@ abstract class ab_1 { // Ãß»óÅ¬·¡½º (ghost) ¿ÜºÎ¿¡¼­ ·Îµå°¡ Àý ¶§ ¾ÈµÊ -ÀÚÃ¼ ½ÇÇ
 		//System.out.println("ºÎ¸ð Å¬·¡½º ÀÔ´Ï´Ù."); //È¯°æ¼³Á¤ °°Àº°Å ÇÒ ¶§ »ç¿ë ex ½ºÄ³³Ê °°Àº°Å 
 		 c = 0123456;
 	}
-	public void ab_a(int a) { //free (ÀÎ¼ö°© »ð¤§´Â Ãß»ó ¸Þ¼Òµå)
+	public void ab_a(int a) { //free (ÀÎ¼ö°ª ¶Ç´Â Ãß»ó ¸Þ¼Òµå)
 		
 	}
 	public abstract void ab_c(); //14¹øÁÙº¸´Ü ÀÌ°ÔÁÁÀ½ free´Ï±î 
@@ -38,7 +38,7 @@ class ab_2 extends ab_1{
 	public int b() { //½ÇÁ¦ ¸Þ¼Òµå+Ãß»ó ¸Þ¼Òµå
 		return 55;
 	}
-
+}
 	@Override
 	public int c() {
 		return 99;
