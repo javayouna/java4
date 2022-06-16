@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 public class awt2 {
 	public static void main(String[] args) {
 		login lg = new login();
-
+		
 	}
 
 }
