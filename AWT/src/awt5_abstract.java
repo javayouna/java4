@@ -80,4 +80,3 @@ public abstract class awt5_abstract {
   }
 }
 	
-

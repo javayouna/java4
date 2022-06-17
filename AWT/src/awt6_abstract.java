@@ -3,8 +3,8 @@ import java.awt.event.*;
 
 public abstract class awt6_abstract {
 	//public abstract String signok();
-	public abstract void nmcheck(); //아이디 확인 
- 	public abstract void dataload();
+	public abstract void nmcheck(int auser); //랜덤확인 
+ 	public abstract void dataload(int honuser);//사용자 입력값
  	
  	Frame fr = new Frame();
 	Button bt = null; //인증번호발송
@@ -42,14 +42,28 @@ public abstract class awt6_abstract {
  	public void clicks() {
  		//인증번호발송
  		this.bt.addActionListener(new ActionListener() {
- 			int mid2 = awt6_abstract.this.mid.getX();
  			
  			@Override
  			public void actionPerformed(ActionEvent e) {
- 			int i = (int)(Math.random()*9999-1000+1);
-			System.out.println(i);	
-		
+ 				int i = (int)(Math.random()*(9999-1000+1))+1000;
+ 					nmcheck(i);
+ 				System.out.println(i);	
+ 				
  			}
+		});
+ 		
+
+ 		
+ 		
+ 		
+ 		this.com.addActionListener(new ActionListener() {
+			//인증확인 버튼
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				int mid2 = awt6_abstract.this.mid.getX();
+				dataload(mid2);
+				
+			}
 		});
 
  		this.close.addActionListener(new ActionListener() {

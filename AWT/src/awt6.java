@@ -25,11 +25,11 @@ class number2 extends awt6_abstract{
 	private int auser; //랜덤함수
 	private int honuser; //사용자입력값
 	
-	@Override
-	public String signok() {
+	//@Override
+	//public String signok() {
 		
-		return null;
-	}
+	//	return null;
+	//}
 
 //	@Override
 //public void nmcheck(int mid2) {
@@ -37,15 +37,24 @@ class number2 extends awt6_abstract{
 	
 	
 	
+	
 	@Override
-	public void dataload() {
+	public void nmcheck(int auser) {
+		this.auser=auser; //인증번호 
+		
+		//if(auser==)
 		
 	}
-
 	@Override
-	public void nmcheck() {
+	public void dataload(int honuser) {
+		this.honuser=honuser; //유저입력값
 		
-		
+		if(auser==honuser) {
+			msg.setText("인증 되었습니다");
+		}
+		else {
+			msg.setText("인증이 틀렸어용");
+		}
 	}
 
 }
